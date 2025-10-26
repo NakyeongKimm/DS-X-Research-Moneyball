@@ -1,4 +1,4 @@
-# InterdisciplinaryScore.py
+# InterdisciplinarySpread.py
 
 import streamlit as st
 import pandas as pd
@@ -12,7 +12,7 @@ st.title("Interdisciplinary Spread of Research Topics")
          
 script_dir = Path(__file__).resolve().parent
 
-csv_path = script_dir.parent.parent / 'BU Topics Analysis' / 'inter_ratio.csv'
+csv_path = script_dir.parent.parent / 'BU Topics Analysis' / 'data' / 'inter_ratio.csv'
 
 pair_dist_image_path = script_dir.parent / 'assets' / 'pair_distribution.png'
 
