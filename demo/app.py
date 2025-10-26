@@ -94,7 +94,7 @@ st.markdown("Adjust the weights below based on what matters most to you:")
 col1, col2, col3, col4 = st.columns(4)
 
 with col1:
-    w_momentum = st.slider("**Compound Annual Growth Rate**", 0.0, 1.0, 0.25, 0.05,
+    w_momentum = st.slider("**Pulibcation Momentum**", 0.0, 1.0, 0.25, 0.05,
                            help="How fast is this field growing?")    
     
 with col2:
@@ -102,12 +102,12 @@ with col2:
                       help="How underrepresented is BU in this field?")
     
 with col3:
-    w_interdisciplinary = st.slider("**Interdisciplinary**", 0.0, 1.0, 0.25, 0.05,
-                                    help="How cross-disciplinary is this field?")
-    
-with col4:
     w_velocity = st.slider("**Social Velocity**", 0.0, 1.0, 0.25, 0.05,
                            help="How trending is this topic?")
+    
+with col4:
+    w_interdisciplinary = st.slider("**'Interdisciplinary Spread'**", 0.0, 1.0, 0.25, 0.05,
+                                    help="How cross-disciplinary is this field?")
     
 # Check if weights sum to 1
 weight_sum = w_gap + w_velocity + w_interdisciplinary + w_momentum
@@ -152,10 +152,10 @@ st.markdown("### Complete Rankings")
 
 # Prepare display dataframe
 display_metrics = metrics_ranked[['Rank', 'Field', 'Opportunity_Score', 'CAGR', 'Gap Score', 'Social Velocity', 'Interdisciplinarity']]
-display_metrics.columns = ['Rank', 'Field', 'Opportunity Score', 'CAGR', 'Gap Score', 'Social Velocity', 'Interdisciplinarity']
+display_metrics.columns = ['Rank', 'Field', 'Opportunity Score', 'Pulibcation Momentum', 'Gap Score', 'Social Velocity', 'Interdisciplinary Spread']
 
 # Round scores
-for col in ['Opportunity Score', 'CAGR', 'Gap Score', 'Interdisciplinarity', 'Social Velocity']:
+for col in ['Opportunity Score', 'Pulibcation Momentum', 'Gap Score', 'Interdisciplinary Spread', 'Social Velocity']:
     display_metrics[col] = display_metrics[col].round(3)
 
 # Display with styling
