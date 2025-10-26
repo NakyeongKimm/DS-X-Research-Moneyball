@@ -8,7 +8,7 @@ from pathlib import Path
 import os
 
 st.set_page_config(page_title="Interdisciplinary Spread", layout="wide")
-st.title("Interdisciplinary Spread of Research Topics")
+st.title("The Interdisciplinary Ratio within 15 Research Topics")
          
 script_dir = Path(__file__).resolve().parent
 
@@ -16,7 +16,7 @@ csv_path = script_dir.parent.parent / 'BU Topics Analysis' / 'data' / 'inter_rat
 
 pair_dist_image_path = script_dir.parent / 'assets' / 'pair_distribution.png'
 
-st.subheader("Pairwise Distribution of Research Topics")
+st.subheader("Percentage Distribution of Co-occurrence Pairs within Research Field (Total 5 years)")
 
 if os.path.exists(pair_dist_image_path):
     # Use st.image with use_column_width=True for a large, wide display
