@@ -7,7 +7,7 @@ import plotly.graph_objects as go
 import plotly.express as px
 import os
 
-DATA_DIR = '../data'
+DATA_DIR = '../../data'
 filename = 't15_topic_country_summary.csv'
 file_path = os.path.join(DATA_DIR, filename)
 
