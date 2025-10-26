@@ -15,7 +15,7 @@ st.markdown("### Identifying Strategic Investment Opportunities")
 @st.cache_data
 def load_data():
     script_dir = Path(__file__).resolve().parent
-    file_path = script_dir.parent.parent / 'gapscore' / 'data' / 'bu_gap_score.csv'
+    file_path = script_dir.parent.parent / 'BU Topics Analysis' / 'data' / 'bu_gap_score.csv'
     df = pd.read_csv(file_path)
     df['Global_count'] = df['Global_count'].astype(str).str.replace(',', '').astype(float)
     df['BU_count (2024-2025)'] = pd.to_numeric(df['BU_count (2024-2025)'], errors='coerce')
