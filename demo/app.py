@@ -106,7 +106,7 @@ with col3:
                            help="How trending is this topic?")
     
 with col4:
-    w_interdisciplinary = st.slider("**'Interdisciplinary Spread'**", 0.0, 1.0, 0.25, 0.05,
+    w_interdisciplinary = st.slider("**Interdisciplinary Spread**", 0.0, 1.0, 0.25, 0.05,
                                     help="How cross-disciplinary is this field?")
     
 # Check if weights sum to 1
