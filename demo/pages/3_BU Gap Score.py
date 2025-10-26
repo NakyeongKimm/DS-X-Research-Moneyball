@@ -121,7 +121,7 @@ fig.update_layout(
 st.plotly_chart(fig, use_container_width=True)
 
 
-st.subheader("🎯 Research Topics BU Should Prioritize")
+st.subheader("Research Topics BU Should Prioritize")
 # Opportunities remains the same, selecting topics where BU count < 5
 opportunities = df[df['BU_count (2024-2025)'] < 5].sort_values('Gap Score', ascending=False).head(5).reset_index(drop=True)
 
@@ -165,7 +165,7 @@ with container:
         if idx < len(opportunities) - 1:
             st.markdown("---") 
 
-st.subheader("📋 Full Data Table")
+st.subheader("Full Data Table")
 st.dataframe(
     df[['Topic_Short', 'BU_count (2024-2025)', 'Global_count', 'Gap Score']].rename(columns={
         'Topic_Short': 'Topic',
