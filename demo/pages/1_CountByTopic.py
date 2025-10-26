@@ -5,12 +5,12 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import plotly.graph_objects as go
 import os
+from pathlib import Path
 
 st.title("Trends by Topic (2021–2025)")
 
-DATA_DIR = '../../data'
-filename = 't15_topic_summary.csv'
-file_path = os.path.join(DATA_DIR, filename)
+script_dir = Path(__file__).resolve().parent
+file_path = script_dir.parent.parent / 'data' / 't15_topic_summary.csv'
 
 # Read your summary table so topic names are index, columns are years
 summary_table = pd.read_csv(file_path, index_col=0)
