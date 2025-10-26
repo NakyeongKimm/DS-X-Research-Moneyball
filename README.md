@@ -1,6 +1,6 @@
 # DS-X-Research-Moneyball
 
-## Project Structure (The Directory Tree)
+## The Directory Tree
 
 The core application is located in the demo/ directory. All data required to run the dashboard is stored in the data/ directory.
 
