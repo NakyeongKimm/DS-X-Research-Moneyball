@@ -14,12 +14,10 @@ LOGO_WIDTH = 200
 if not os.path.exists(LOGO_PATH):
     st.error(f"Logo file not found at: {LOGO_PATH}. Please check the file path.")
 else:
-    # 1. Create three columns to push the content to the center.
     # The ratio [1, 0.5, 1] means the center column is smaller than the sides, 
     # but we'll use a fixed width for the image to control the size precisely.
     col1, col2, col3 = st.columns([1, 0.5, 1])
     
-    # 2. Place the image in the center column (col2)
     with col2:
         # Use the 'width' parameter to set a fixed, small size (e.g., 100px)
         st.image(LOGO_PATH, width=LOGO_WIDTH)
@@ -93,21 +91,31 @@ st.markdown("Adjust the weights below based on what matters most to you:")
 
 col1, col2, col3, col4 = st.columns(4)
 
+momentum_desc = "Publication Momentum — captures how fast a research field is growing in academia using publication data and compound annual growth rate (CAGR)."
+gap_desc = "BU Gap Score — identifies where BU is underrepresented compared to global research activity, spotlighting potential strategic investment opportunities."
+velocity_desc = "Social Velocity — measures how much a research topic is gaining public and online traction, revealing “zeitgeist” influence from social media and news."
+interdisc_desc = "Interdisciplinary Spread — quantifies how cross-cutting a topic is across academic domains, helping BU find collaboration-rich frontiers."
+
 with col1:
     w_momentum = st.slider("**Pulibcation Momentum**", 0.0, 1.0, 0.25, 0.05,
-                           help="How fast is this field growing?")    
+                           help="How fast is this field growing?")  
+    st.markdown(f"<p style='font-size: 12px; color: #555; margin-top: -10px; margin-bottom: 20px; border-left: 3px solid #CC0000; padding-left: 8px;'>{momentum_desc}</p>", unsafe_allow_html=True)
     
 with col2:
     w_gap = st.slider("**BU Gap Score**", 0.0, 1.0, 0.25, 0.05, 
                       help="How underrepresented is BU in this field?")
+    st.markdown(f"<p style='font-size: 12px; color: #555; margin-top: -10px; margin-bottom: 20px; border-left: 3px solid #CC0000; padding-left: 8px;'>{gap_desc}</p>", unsafe_allow_html=True)
     
 with col3:
     w_velocity = st.slider("**Social Velocity**", 0.0, 1.0, 0.25, 0.05,
                            help="How trending is this topic?")
+    st.markdown(f"<p style='font-size: 12px; color: #555; margin-top: -10px; margin-bottom: 20px; border-left: 3px solid #CC0000; padding-left: 8px;'>{velocity_desc}</p>", unsafe_allow_html=True)
+    
     
 with col4:
     w_interdisciplinary = st.slider("**Interdisciplinary Spread**", 0.0, 1.0, 0.25, 0.05,
                                     help="How cross-disciplinary is this field?")
+    st.markdown(f"<p style='font-size: 12px; color: #555; margin-top: -10px; margin-bottom: 20px; border-left: 3px solid #CC0000; padding-left: 8px;'>{interdisc_desc}</p>", unsafe_allow_html=True)
     
 # Check if weights sum to 1
 weight_sum = w_gap + w_velocity + w_interdisciplinary + w_momentum
