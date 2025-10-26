@@ -127,7 +127,7 @@ if abs(weight_sum - 1.0) > 0.01:
     w_velocity_norm = w_velocity / weight_sum if weight_sum > 0 else 0.25
     w_interdisciplinary_norm = w_interdisciplinary / weight_sum if weight_sum > 0 else 0.25
     w_momentum_norm = w_momentum / weight_sum if weight_sum > 0 else 0.25
-    st.info(f"Auto-normalized to: Gap={w_gap_norm:.2f}, Velocity={w_velocity_norm:.2f}, Interdisciplinary={w_interdisciplinary_norm:.2f}, Momentum={w_momentum_norm:.2f}")
+
 else:
     st.success(f"Perfect! Weights sum to {weight_sum:.2f}")
     w_gap_norm = w_gap
