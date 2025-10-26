@@ -8,7 +8,7 @@ from pathlib import Path
 import os
 
 st.set_page_config(page_title="Interdisciplinary Spread", layout="wide")
-st.title("The Interdisciplinary Ratio within 15 Research Topics")
+st.title("Interdisciplinary Ratio within Research Topics")
          
 script_dir = Path(__file__).resolve().parent
 
