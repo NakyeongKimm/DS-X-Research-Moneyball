@@ -11,7 +11,7 @@ import seaborn as sns
 
 st.set_page_config(page_title="BU Research Social Velocity", layout="wide")
 
-st.title("⚡ BU Research Social Velocity Dashboard")
+st.title("BU Research Social Velocity Dashboard")
 
 # ==========================
 # --- Load or Fetch DOIs ---
