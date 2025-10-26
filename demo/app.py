@@ -28,8 +28,8 @@ st.set_page_config(page_title="BU Research Navigator", layout="wide")
 
 # Header with BU branding
 st.markdown("""
-    <h1 style='text-align: center; color: #CC0000;'>BU Research Navigator</h1>
-    <h3 style='text-align: center; color: #666;'>Welcome back! Let's discover your next research opportunity.</h3>
+    <h1 style='text-align: center; color: #CC0000;'>Welcome back!</h1>
+    <h3 style='text-align: center; color: #666;'>Let's discover your next research opportunity.</h3>
     <hr style='margin-bottom: 30px;'>
 """, unsafe_allow_html=True)
 
