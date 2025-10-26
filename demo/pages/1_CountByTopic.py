@@ -8,7 +8,7 @@ import os
 
 st.title("Trends by Topic (2021–2025)")
 
-DATA_DIR = '../data'
+DATA_DIR = '../../data'
 filename = 't15_topic_summary.csv'
 file_path = os.path.join(DATA_DIR, filename)
 
