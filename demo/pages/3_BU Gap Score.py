@@ -8,7 +8,7 @@ from pathlib import Path
 
 st.set_page_config(page_title="BU Research Gap Analysis", layout="wide")
 
-st.title("🔬 BU Research Gap Analysis")
+st.title("BU Research Gap Analysis")
 st.markdown("### Identifying Strategic Investment Opportunities")
 
 # Load data
@@ -54,7 +54,7 @@ df_filtered = df # Use full dataframe for the visualization
 
 
 # Main visualization
-st.subheader("📊 BU vs Global Research Activity")
+st.subheader("BU vs Global Research Activity")
 
 # Create figure with Plotly (INTERACTIVE with hover!)
 fig = go.Figure()
