@@ -6,10 +6,10 @@ import matplotlib.pyplot as plt
 import plotly.graph_objects as go
 import plotly.express as px
 import os
+from pathlib import Path
 
-DATA_DIR = '../../data'
-filename = 't15_topic_country_summary.csv'
-file_path = os.path.join(DATA_DIR, filename)
+script_dir = Path(__file__).resolve().parent
+file_path = script_dir.parent.parent / 'data' / 't15_topic_country_summary.csv'
 
 # Read your summary table so topic names are index, columns are years
 summary_table = pd.read_csv(file_path)
