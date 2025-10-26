@@ -7,7 +7,7 @@ from sklearn.preprocessing import MinMaxScaler
 from pathlib import Path
 import os
 
-LOGO_PATH = "assets/new_logo.png" 
+LOGO_PATH = "demo/assets/new_logo.png" 
 LOGO_WIDTH = 200 
 
 # Check if the file exists (Good practice from previous step)
